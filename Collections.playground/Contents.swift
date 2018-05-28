@@ -26,9 +26,8 @@ import Foundation
  
  Try that code now.
  */
-// Create the emptry shopping list
-
-
+// Create the empty shopping list
+var shoppingList : [String] = []
 
 /*:
  To add items to an array, you can use the ``append()`` method. In general, that looks like this:
@@ -42,13 +41,16 @@ import Foundation
  Try that code now.
  */
 // Add the first item to the shopping list
-
+shoppingList.append("Six Eggs")
 
 /*:
  Now add the remaining four items to the shopping list from the example shown above.
  */
 // Add the remaining items to the shopping list
-
+shoppingList.append("Milk")
+shoppingList.append("Nachos")
+shoppingList.append("4 bottles of water")
+shoppingList.append("10 pack of Vodka")
 
 /*:
  #### Creating a fixed length array
@@ -62,7 +64,7 @@ import Foundation
  Try this now.
  */
 // Create an array with ten values defaulting to zero
-
+var tenIntegers = Array(repeating: 0, count: 10)
 
 /*:
  
@@ -73,9 +75,10 @@ import Foundation
  
  */
 // Complete the exercises here
-
-
-
+var fifIntegers = Array(repeating: 50, count: 15)
+print(fifIntegers)
+var fiveIntegers = Array(repeating: "A", count: 5)
+print(fiveIntegers)
 /*:
  ## Intro to Collections
  
@@ -102,7 +105,15 @@ import Foundation
  Try creating this dictionary now.
  */
 // Create a dictionary to connect airport codes to airport names
+var airports : [String : String] = [:]
 
+airports["YYZ"] = "Toronto Pearson"
+
+airports["LHR"] = "London Heathrow"
+
+airports["DUB"] = "Dublin Airport"
+
+print(airports)
 
 /*:
  **NOTE**
@@ -118,7 +129,9 @@ import Foundation
  Why did we get a *nil* value for the key ``AMS``?
 
  */
+print(airports["LHR"])
 
+print(airports["AMS"])
 /*:
  #### Applications for dictionaries
  
